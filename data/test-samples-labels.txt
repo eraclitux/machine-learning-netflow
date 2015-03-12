@@ -1,27 +1,20 @@
  strange http flows
- mysql
- mysql
- small outgoing udp flood
+ concurrent https sessions
+ https traffic
+ http
  strange TCP/80
  strange TCP/80
  TCP/80
  high http traffic
- outgoing udp flood
  http traffic
- smtp 
- nfs
- nfs
  nfs
  port 2305
- smtp spam 
- smtp spam 
+ smtp 
  smtp spam 
  this should be a massive smtp sending (target MTA has ETRN)
- this should be a massive smtp sending (target MTA has ETRN)
- this should be a massive smtp sending (target MTA has ETRN)
- unknown traffic on unprivileged ports
- concurrent https sessions
- udp 8090
- https traffic
  TCP 7022
- http
+ udp 8090
+ small outgoing udp flood
+ outgoing udp flood
+ outgoing udp flood
+ outgoing udp flood

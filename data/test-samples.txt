@@ -1,29 +1,22 @@
 ; Suspicious non DDoS samples to test kNN
 ; Date first seen          Duration Proto       Dst IP Addr    Flows(%)     Packets(%)       Bytes(%)         pps      bps   bpp
-2015-01-11 07:12:14.667 4295562.914 any        XXX.XXX.XXX.XXX    14045( 0.2)    1.3 M( 0.6)    1.8 G( 1.1)        0     3398  1363 #  strange http flows
-2015-03-02 23:59:01.580   250.849 any        XXX.XXX.XXX.XXX        4( 0.0)   583551( 0.3)  858.1 M( 0.5)     2326   27.4 M  1470   #  mysql
-2015-03-02 23:59:32.168   314.823 any         XXX.XXX.XXX.XXX      300( 0.0)   612020( 0.3)  880.4 M( 0.5)     1944   22.4 M  1438   #  mysql
-2015-03-03 00:05:29.324   249.729 any       XXX.XXX.XXX.XXX    41228( 0.6)    1.7 M( 0.8)    2.3 G( 1.3)     6793   73.8 M  1358   # small outgoing udp flood
-2015-03-03 00:04:46.118   313.433 any       XXX.XXX.XXX.XXX    65544( 1.0)   958845( 0.5)    1.1 G( 0.6)     3059   27.9 M  1139   # strange TCP/80
-2015-03-03 00:01:26.568   511.240 any      XXX.XXX.XXX.XXX    16509( 0.3)   799646( 0.4)  332.0 M( 0.2)     1564    5.2 M   415   #  strange TCP/80
-2015-03-02 23:03:23.172     0.015 any     XXX.XXX.XXX.XXX        1( 0.0)     1546( 0.0)    2.3 M( 0.0)   103066    1.2 G  1498   #  TCP/80
-2015-03-03 02:59:50.060   202.630 any       XXX.XXX.XXX.XXX       22( 0.0)    1.8 M( 1.2)    2.7 G( 2.3)     8898  106.7 M  1498   #  high http traffic
-2015-02-27 08:34:09.931   275.588 any     XXX.XXX.XXX.XXX   396858( 4.2)   14.9 M( 8.1)   20.2 G(13.8)    54037  587.4 M  1358   # outgoing udp flood
-2015-03-04 05:09:30.969    15.477 any         XXX.XXX.XXX.XXX       10( 0.0)   117404( 0.1)  172.7 M( 0.2)     7585   89.3 M  1471   # http traffic
-2015-03-04 17:51:56.955     0.186 any        XXX.XXX.XXX.XXX        1( 0.0)     2867( 0.0)    4.1 M( 0.0)    15413  174.6 M  1416 # smtp 
-2015-03-05 17:09:44.991   288.943 any        XXX.XXX.XXX.XXX       13( 0.0)    7.8 M( 2.7)   11.7 G( 4.9)    26941  323.3 M  1499 # nfs
-2015-03-05 17:14:09.037   943.574 any        XXX.XXX.XXX.XXX       19( 0.0)   15.0 M( 5.0)   22.6 G( 9.0)    15945  191.3 M  1499 # nfs
+2015-01-11 07:12:14.667 4295562.914 any        XXX.XXX.XXX.XXX    14045( 0.2)    1.3 M( 0.6)    1.8 G( 1.1)        0     3398  1363 # strange http flows
+2015-03-09 05:18:30.579   387.262 any       XXX.XXX.XXX.XXX       13( 0.0)    2.5 M( 2.2)    3.8 G( 4.6)     6499   77.9 M  1497 # concurrent https sessions
+2015-03-10 01:59:06.179   328.155 any       XXX.XXX.XXX.XXX       59( 0.0)    3.1 M( 1.7)    4.7 G( 3.0)     9597  115.1 M  1498 # https traffic
+2015-03-11 13:21:24.747     0.127 any     XXX.XXX.XXX.XXX        1( 0.0)     2896( 0.0)   127800( 0.0)    22803    8.1 M    44 # http
+2015-03-03 00:04:46.118   313.433 any       XXX.XXX.XXX.XXX    65544( 1.0)   958845( 0.5)    1.1 G( 0.6)     3059   27.9 M  1139 # strange TCP/80
+2015-03-03 00:01:26.568   511.240 any      XXX.XXX.XXX.XXX    16509( 0.3)   799646( 0.4)  332.0 M( 0.2)     1564    5.2 M   415 # strange TCP/80
+2015-03-02 23:03:23.172     0.015 any     XXX.XXX.XXX.XXX        1( 0.0)     1546( 0.0)    2.3 M( 0.0)   103066    1.2 G  1498 # TCP/80
+2015-03-03 02:59:50.060   202.630 any       XXX.XXX.XXX.XXX       22( 0.0)    1.8 M( 1.2)    2.7 G( 2.3)     8898  106.7 M  1498 # high http traffic
+2015-03-04 05:09:30.969    15.477 any         XXX.XXX.XXX.XXX       10( 0.0)   117404( 0.1)  172.7 M( 0.2)     7585   89.3 M  1471 # http traffic
 2015-03-10 17:14:52.652   242.550 any        XXX.XXX.XXX.XXX       12( 0.0)   13.5 M( 4.3)   20.1 G( 8.3)    55529  664.4 M  1495 # nfs
 2015-03-07 01:55:01.695    81.326 any       XXX.XXX.XXX.XXX        3( 0.0)    1.4 M( 0.8)    2.0 G( 1.6)    16790  195.4 M  1454 # port 2305
+2015-03-04 17:51:56.955     0.186 any        XXX.XXX.XXX.XXX        1( 0.0)     2867( 0.0)    4.1 M( 0.0)    15413  174.6 M  1416 # smtp 
 2015-03-09 05:08:45.970   372.588 any       XXX.XXX.XXX.XXX   169836( 2.4)    2.7 M( 2.3)    1.1 G( 1.3)     7217   23.8 M   412 # smtp spam 
-2015-03-09 03:53:10.088  5207.485 any       XXX.XXX.XXX.XXX   185122( 2.5)    3.2 M( 2.8)  242.0 M( 0.3)      612   371747    75 # smtp spam 
-2015-03-04 05:04:16.523   289.220 any       XXX.XXX.XXX.XXX    35868( 0.5)   841462( 0.7)  611.2 M( 0.8)     2909   16.9 M   726 # smtp spam 
-2015-03-04 16:39:53.461   305.106 any      XXX.XXX.XXX.XXX    21248( 0.2)   831766( 0.3)  855.1 M( 0.4)     2726   22.4 M  1028 # this should be a massive smtp sending (target MTA has ETRN)
-2015-03-09 05:19:54.609   304.769 any      XXX.XXX.XXX.XXX    44180( 0.6)    1.0 M( 0.9)  777.1 M( 0.9)     3414   20.4 M   746 # this should be a massive smtp sending (target MTA has ETRN)
 2015-03-10 17:09:50.900   305.083 any      XXX.XXX.XXX.XXX    44036( 0.4)   801745( 0.3)  417.9 M( 0.2)     2627   11.0 M   521 # this should be a massive smtp sending (target MTA has ETRN)
-2015-03-09 05:17:55.705   410.300 any       XXX.XXX.XXX.XXX      412( 0.0)    1.2 M( 1.1)   65.7 M( 0.1)     3012    1.3 M    53 # unknown traffic on unprivileged ports
-2015-03-09 05:18:30.579   387.262 any       XXX.XXX.XXX.XXX       13( 0.0)    2.5 M( 2.2)    3.8 G( 4.6)     6499   77.9 M  1497 # concurrent https sessions
-2015-03-09 17:18:43.460   289.856 any        XXX.XXX.XXX.XXX        9( 0.0)   34.8 M(10.5)    2.7 G( 1.1)   120118   75.0 M    78 # udp 8090
-2015-03-10 01:59:06.179   328.155 any       XXX.XXX.XXX.XXX       59( 0.0)    3.1 M( 1.7)    4.7 G( 3.0)     9597  115.1 M  1498 # https traffic
 2015-03-10 02:09:57.208   297.278 any       XXX.XXX.XXX.XXX      504( 0.0)    1.5 M( 0.9)    2.1 G( 1.5)     4881   55.3 M  1415 # TCP 7022
-2015-03-11 13:21:24.747     0.127 any     XXX.XXX.XXX.XXX        1( 0.0)     2896( 0.0)   127800( 0.0)    22803    8.1 M    44 # http
+2015-03-09 17:18:43.460   289.856 any        XXX.XXX.XXX.XXX        9( 0.0)   34.8 M(10.5)    2.7 G( 1.1)   120118   75.0 M    78 # udp 8090
+2015-03-03 00:05:29.324   249.729 any       XXX.XXX.XXX.XXX    41228( 0.6)    1.7 M( 0.8)    2.3 G( 1.3)     6793   73.8 M  1358 # small outgoing udp flood
+2015-03-13 14:30:05.904    91.027 any       XXX.XXX.XXX.XXX    16550( 0.2)   13.3 M( 5.0)   18.2 G( 7.6)   145970    1.6 G  1370 # outgoing udp flood
+2015-02-27 08:34:09.931   275.588 any     XXX.XXX.XXX.XXX   396858( 4.2)   14.9 M( 8.1)   20.2 G(13.8)    54037  587.4 M  1358 # outgoing udp flood
+2015-03-13 12:18:01.203   653.575 any       XXX.XXX.XXX.XXX    23762( 0.2)   91.3 M(29.0)  125.6 G(41.5)   139753    1.5 G  1374 # outgoing udp flood
