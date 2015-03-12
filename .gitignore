@@ -1,0 +1,4 @@
+.ipynb_checkpoints
+data/sensible
+*.swp
+*.pyc
