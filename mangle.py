@@ -45,12 +45,14 @@ def aggregate_netflow_csv(*paths):
     """XXX"""
     rows_array = []
     labels_array = []
+    labels_dict ={}
     numeric_labels_array = []
     numeric_label = 0
     for path in paths:
         slabel = string.split(path, "/")[-1]
         label = string.rstrip(slabel, ".csv")
         numeric_label += 1
+        labels_dict[numeric_label] = label
         with open(path, 'rb') as csvfile:
             rows = csv.reader(csvfile, delimiter=',')
             for row in rows:
@@ -63,6 +65,6 @@ def aggregate_netflow_csv(*paths):
     np_array = np.array(rows_array)
     #print rows_array
     #print np_array
-    return np_array, labels_array, numeric_labels_array
+    return np_array, labels_array, numeric_labels_array, labels_dict
 
 # vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab
