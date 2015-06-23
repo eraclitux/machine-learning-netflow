@@ -1,20 +1,11 @@
- strange http flows
  concurrent https sessions
  https traffic
- http
- strange TCP/80
- strange TCP/80
- TCP/80
  high http traffic
  http traffic
  nfs
  port 2305
- smtp 
- smtp spam 
- this should be a massive smtp sending (target MTA has ETRN)
+ this should be a massive smtp sending (MTA has ETRN)
  TCP 7022
  udp 8090
  small outgoing udp flood
- outgoing udp flood
- outgoing udp flood
  outgoing udp flood
