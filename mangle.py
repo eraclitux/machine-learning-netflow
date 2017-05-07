@@ -11,7 +11,7 @@ def de_humanize(value):
 
 def parse_netflow_csv(path):
     rows_array = []
-    with open(path, 'rb') as csvfile:
+    with open(path, "rt", encoding="utf-8") as csvfile:
         rows = csv.reader(csvfile, delimiter=',')
         for row in rows:
             row[0] = float(row[0])
@@ -49,11 +49,11 @@ def aggregate_netflow_csv(*paths):
     numeric_labels_array = []
     numeric_label = 0
     for path in paths:
-        slabel = string.split(path, "/")[-1]
-        label = string.rstrip(slabel, ".csv")
+        slabel = path.split("/")[-1]
+        label = slabel.rstrip(".csv")
         numeric_label += 1
         labels_dict[numeric_label] = label
-        with open(path, 'rb') as csvfile:
+        with open(path, "rt", encoding="utf-8") as csvfile:
             rows = csv.reader(csvfile, delimiter=',')
             for row in rows:
                 row[0] = float(row[0])
